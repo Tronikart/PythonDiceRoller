@@ -12,3 +12,6 @@ Simple and easy python RPG dice roller, supports various forms of input
 - 1d6d20+7
 
 - 20
+
+
+Only needs the random module to work

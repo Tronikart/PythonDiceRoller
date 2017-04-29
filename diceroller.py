@@ -29,6 +29,7 @@ def roll(dice):
 				endResult['dice'] = ""
 				# Avoiding negative numbers
 				i = numberDice if numberDice > 0 else -numberDice
+				i += 1
 				result = 0
 				# Going through all the dice rolls, at the end, delete the extra ' + ' and break
 				while(True):
@@ -63,6 +64,7 @@ def roll(dice):
 				endResult['multipleResult'] = True
 				endResult['dice'] = ""
 				i = numberDice if numberDice > 0 else -numberDice
+				i += 1
 				auxResult = 0
 				while(True):
 					if i > 0:

@@ -28,19 +28,17 @@ def roll(dice):
 				endResult['multipleResult'] = True
 				endResult['dice'] = ""
 				# Avoiding negative numbers
-				i = numberDice if numberDice > 0 else -numberDice
-				i += 1
+				# i = numberDice if numberDice > 0 else -numberDice
+				# i += 1
+				i = 0
 				result = 0
 				# Going through all the dice rolls, at the end, delete the extra ' + ' and break
 				while(True):
-					if i > 0:
+					if i < numberDice:
 						aux = random.randrange(1, dieNumber + 1)
+						print aux
 						result += aux
-						if i == numberDice:
-							pass
-						else:
-							endResult['dice'] += str(aux) + " + "
-						i -= 1
+						i += 1
 					else:
 						endResult['dice'] = endResult['dice'][:len(endResult['dice'])-3]
 						break
@@ -63,12 +61,13 @@ def roll(dice):
 			else:
 				endResult['multipleResult'] = True
 				endResult['dice'] = ""
-				i = numberDice if numberDice > 0 else -numberDice
-				i += 1
+				#i = numberDice if numberDice > 0 else -numberDice
+				#i += 1
+				i = 0
 				auxResult = 0
 				while(True):
-					if i > 0:
-						i -= 1
+					if i < numberDice:
+						i += 1
 						aux = random.randrange(1, dieNumber + 1)
 						auxResult += aux
 					else:
